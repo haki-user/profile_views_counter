@@ -3,4 +3,5 @@
 url: https://countme.onrender.com
 
 example: https://countme.onrender.com/pvc?username=yourUsername
-[Count: ![count]](https://countme.onrender.com/pvc?username=pvcrepo)
+[Count: ![Count](https://img.shields.io/endpoint?url=https://countme.onrender.com/pvc?username=pvcrepo)](https://countme.onrender.com/pvc?username=pvcrepo)
+
