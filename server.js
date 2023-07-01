@@ -97,8 +97,9 @@ app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
   res.set('Cache-Control', 'no-cache');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
-  const uniqueUrl = `${badge}?v=${Date.now()}`;
-  res.send(uniqueUrl);
+  // const uniqueUrl = `${badge}?v=${Date.now()}`;
+  // res.send(uniqueUrl);
+  res.send(badge);
 });
 
 // send count
