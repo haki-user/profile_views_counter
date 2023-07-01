@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/haki-user/profile_views_counter#readme",
   "dependencies": {
+    "badge-maker": "^3.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.3.1"
   }
