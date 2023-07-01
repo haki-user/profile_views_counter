@@ -94,6 +94,7 @@ app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
     message: req.count.toString()
   });
   res.set('Content-Type', 'image/svg+xml');
+  res.set('Cache-Control: max-age=0, no-cache, no-store, must-revalidate');
   res.send(badge);
 });
 
