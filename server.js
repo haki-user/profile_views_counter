@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
 app.get("/pvc", isDBCon, async (req, res) => {
   const username = req.query.username;
   if(!username) {
-    res.sendStatus(404);
+    return res.sendStatus(404);
   }
   const user = await User.exists({ username });
   if (user) {
