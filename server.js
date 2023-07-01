@@ -81,7 +81,7 @@ app.get("/", (req, res) => {
      <h5>To count (returns count): &nbsp /pvc?username=</h5>
      <h5>To get badge and count: &nbsp /pvcb?username=yourUsername<h5>
      <p>Optional: label,message,labelColor,color,style &nbsp /pvcb?username=value&&color=red&&labelColor=value<p>
-     <p>ex: &nbsp <a href="https://countme.onrender.com/pvcb?username=someone&&color=red&&lableColor=blur"> https://countme.onrender.com/pvcb?username=someone&&color=red&&lableColor=blur <a> <p>
+     <p>ex: &nbsp <a href="https://countme.onrender.com/pvcb?username=someone&color=red&lableColor=blur"> https://countme.onrender.com/pvcb?username=someone&color=red&lableColor=blur <a> <p>
     `);
 });
 
@@ -94,8 +94,11 @@ app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
     message: req.count.toString()
   });
   res.set('Content-Type', 'image/svg+xml');
-  res.set('Cache-Control: max-age=0, no-cache, no-store, must-revalidate');
-  res.send(badge);
+  res.set('Cache-Control', 'max-age=0');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  const uniqueUrl = `${badge}?v=${Date.now()}`;
+  res.send(uniqueUrl);
 });
 
 // send count
