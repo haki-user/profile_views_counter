@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
-const MDBURI = process.env.DBURI;
+const MDBURI = process.env.MDBURI;
 
 let dbCon = false;
 mongoose.connect(MDBURI).then(() => {
@@ -62,7 +62,7 @@ app.get("/pvc", isDBCon, async (req, res) => {
 
 app.get("/users", isDBCon, async (req, res) => {
   const secret = req.query.secret;
-  if (secret != (process.env.SECRET || "dd")) {
+  if (secret != (process.env.SECRET)) {
     res.status(403).send("Try again ;)");
   } else {
     const users = await User.find();
