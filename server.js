@@ -97,7 +97,7 @@ app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
   res.set('Cache-Control', 'no-cache');
   // const uniqueUrl = `${badge}?timsestamp=${Date.now()}`;
   // res.send(uniqueUrl);
-  res.set('ETag', Date.now().toString());
+  res.set('ETag', `"${Date.now().toString()}"`);
   res.send(badge);
 });
 
