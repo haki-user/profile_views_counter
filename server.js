@@ -94,7 +94,7 @@ app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
     message: req.count.toString()
   });
   res.set('Content-Type', 'image/svg+xml');
-  res.set('Cache-Control', 'max-age=0');
+  res.set('Cache-Control', 'no-cache');
   res.set('Pragma', 'no-cache');
   res.set('Expires', '0');
   const uniqueUrl = `${badge}?v=${Date.now()}`;
