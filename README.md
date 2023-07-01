@@ -3,4 +3,4 @@
 url: https://countme.onrender.com
 
 example: https://countme.onrender.com/pvc?username=yourUsername
-![pvc](https://countme.onrender.com/pvcrepo)
+![pvc](https://countme.onrender.com/pvc?username=pvcrepo)
