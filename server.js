@@ -44,7 +44,9 @@ app.get("/pvc", isDBCon, async (req, res) => {
   if(!username) {
     return res.sendStatus(404);
   }
-  const user = await User.exists({ username });
+  // const regex = /^[a-zA-Z0-9](?:[a-zA-Z0-9]|-(?=[a-zA-Z0-9])){0,38}$/;
+  // regex.test(username);
+  const user = await User.findOne({ username });
   if (user) {
       try {
         const count = user.view_ct;
