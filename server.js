@@ -6,9 +6,9 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
-const MDBURI = process.env.MDBURI;
+const MDBURI = process.env.DBURI;
 
- dbCon = false;
+let dbCon = false;
 mongoose.connect(MDBURI).then(() => {
   dbCon = true;
   console.log("Connected to mongoDB");
