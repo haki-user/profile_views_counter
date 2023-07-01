@@ -95,9 +95,10 @@ app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
   });
   res.set('Content-Type', 'image/svg+xml');
   res.set('Cache-Control', 'no-cache');
-  const uniqueUrl = `${badge}?timsestamp=${Date.now()}`;
-  res.send(uniqueUrl);
-  // res.send(badge);
+  // const uniqueUrl = `${badge}?timsestamp=${Date.now()}`;
+  // res.send(uniqueUrl);
+  res.set('ETag', Date.now().toString());
+  res.send(badge);
 });
 
 // send count
