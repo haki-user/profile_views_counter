@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 
 app.get("/pvc", isDBCon, async (req, res) => {
   const username = req.query.username;
-  const user = await User.findOne({ username });
+  const user = await User.exists({ username });
   if (user) {
       try {
         const count = user.view_ct;
