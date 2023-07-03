@@ -79,9 +79,10 @@ app.get("/", (req, res) => {
     <button type="submit">get all users</button>
      </form>
      <h5>To count (returns count): &nbsp /pvc?username=</h5>
-     <h5>To get badge and count: &nbsp /pvcb?username=yourUsername<h5>
+     <h5>To get badge with count: &nbsp /pvcb?username=yourUsername<h5>
      <p>Optional: label,message,labelColor,color,style &nbsp /pvcb?username=value&color=red&labelColor=value<p>
-     <p>ex: &nbsp <a href="https://countme.onrender.com/pvcb?username=someone&color=red&lableColor=blur"> https://countme.onrender.com/pvcb?username=someone&color=red&lableColor=blur <a> <p>
+     <p>ex: &nbsp <a href="https://countme.onrender.com/pvcb?username=someone&color=red&labelColor=blur"> https://countme.onrender.com/pvcb?username=someone&color=red&labelColor=blue <a> <p>
+     <p>Github: &nbsp <a href="https://github.com/haki-user/profile_views_counter">https://github.com/haki-user/profile_views_counter</a>
     `);
 });
 
