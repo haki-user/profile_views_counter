@@ -87,7 +87,7 @@ app.get("/", (req, res) => {
 
 // Send badge
 app.get('/pvcb', isDBCon, updateUserCt, (req, res) => {
-  const { username, ...options } = req.params;
+  const { username, ...options } = req.query;
 
   const badge = genBadge({
     ...options,
