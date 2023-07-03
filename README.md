@@ -2,7 +2,7 @@
 
 add in github readme.md: `![](https://countme.onrender.com/pvcb/?username=YOUR_USERNAME)`
 
-Optional: label,message,labelColor,color,style   `/pvcb?username=value&color=red&labelColor=value`
+Optional: label, message, labelColor, color, style  ex. `/pvcb?username=value&color=red&labelColor=value`
 
 url: https://countme.onrender.com
 
