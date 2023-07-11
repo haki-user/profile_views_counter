@@ -73,6 +73,11 @@ const genBadge = (options) => {
 // Handle home route
 app.get("/", (req, res) => {
   res.send(`
+  <!DOCTYPE html>
+    <html>
+    <head>
+      <meta name="google-site-verification" content="DVyun-8v_P9Lkep5YCjp7V0yjVSE7q_OmtL8E6tRpjw" />
+    </head>
     <form action="/users">
     <label>Secret<label>
     <input name=secret placeholder="Demon Lord">
@@ -83,6 +88,7 @@ app.get("/", (req, res) => {
      <p>Optional: label,message,labelColor,color,style &nbsp /pvcb?username=value&color=red&labelColor=value<p>
      <p>ex: &nbsp <a href="https://countme.onrender.com/pvcb?username=someone&color=red&labelColor=blur"> https://countme.onrender.com/pvcb?username=someone&color=red&labelColor=blue <a> <p>
      <p>Github: &nbsp <a href="https://github.com/haki-user/profile_views_counter">https://github.com/haki-user/profile_views_counter</a>
+     </html>
     `);
 });
 
