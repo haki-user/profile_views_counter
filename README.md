@@ -1,6 +1,6 @@
 # profile_views_counter
 
-Add in github readme.md: `![](https://countme.onrender.com/pvcb/?username=YOUR_USERNAME)` and change username.
+Add in github README.md: `![](https://countme.onrender.com/pvcb/?username=YOUR_USERNAME)` and change username.
 <br />
 <br />
 Optional: label, labelColor, color, style.
